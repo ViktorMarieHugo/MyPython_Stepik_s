@@ -1,32 +1,32 @@
-def user_request():
+def user_request(inclunums,iclucaps,inclulow,inclusimbols,ambiguous):
     '''собирает от пользователя информацию о необходимом содержании пароля
     все переменные в теле программы'''
     chars = []
-    inclunums = input("Whether to include numbers?  Yes/No")
-    if inclunums.lower() == "yes":
-        chars.append(digits)
-    elif inclunums.lower() == "no":
+    inclunums_q = input("Whether to include numbers?  Yes/No")
+    if inclunums_q.lower() == "yes":
+        chars.append(inclunums)
+    elif inclunums_q.lower() == "no":
         pass
     else:
         pass
-    iclucaps = input("Whether to include uppercase letters? Yes/No")
-    if iclucaps.lower() == "yes":
-        chars.append(caps_let)
-    elif iclucaps.lower() == "no":
+    iclucaps_q = input("Whether to include uppercase letters? Yes/No")
+    if iclucaps_q.lower() == "yes":
+        chars.append(iclucaps)
+    elif iclucaps_q.lower() == "no":
         pass
     else:
         pass
-    inclulow = input("Whether to include lowercase letters? Yes/No")
-    if inclulow.lower() == "yes":
-         chars.append(low_let)
-    elif inclulow.lower() == "no":
+    inclulow_q = input("Whether to include lowercase letters? Yes/No")
+    if inclulow_q.lower() == "yes":
+         chars.append(inclulow)
+    elif inclulow_q.lower() == "no":
         pass
     else:
         pass
-    inclusimbols = input("Whether to include symbols? Yes/No")
-    if inclusimbols.lower() == "yes":
-        chars.append(punct)
-    elif inclusimbols.lower() == "no":
+    inclusimbols_q = input("Whether to include symbols? Yes/No")
+    if inclusimbols_q.lower() == "yes":
+        chars.append(inclusimbols)
+    elif inclusimbols_q.lower() == "no":
         pass
     else:
         pass
@@ -39,6 +39,16 @@ def user_request():
                 chars1.append(chars[i])
             else:
                 continue
-        chars = chars1
     elif exclude_ambiguous.lower() == "no":
         pass
+    chars = chars1
+    return chars
+
+inclunums = '0123456789'
+inclulow = 'abcdefghijklmnopqrstuvwxyz'
+iclucaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+inclusimbols = '!#$%&*+-=?@^_'
+ambiguous = 'il1Lo0O'
+
+
+print(user_request(inclunums,iclucaps,inclulow,inclusimbols,ambiguous))
