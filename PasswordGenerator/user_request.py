@@ -1,4 +1,6 @@
 def user_request():
+    '''собирает от пользователя информацию о необходимом содержании пароля
+    все переменные в теле программы'''
     chars = []
     inclunums = input("Whether to include numbers?  Yes/No")
     if inclunums.lower() == "yes":
