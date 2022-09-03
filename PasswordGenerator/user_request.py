@@ -1,39 +1,43 @@
 def user_request():
-    numofpass = int(input())
-    lenofpass = int(input())
+    chars = ''
     inclunums = input("Whether to include numbers?  Yes/No")
     if inclunums.lower() == "yes":
-        inclunums = True
+        chars.extend(digits)
     elif inclunums.lower() == "no":
-        inclunums = False
+        pass
     else:
-        inclunums = False
+        pass
     iclucaps = input("Whether to include uppercase letters? Yes/No")
     if iclucaps.lower() == "yes":
-        iclucaps = True
+        chars.extend(caps_let)
     elif iclucaps.lower() == "no":
-        iclucaps = False
+        pass
     else:
-        iclucaps = False
+        pass
     inclulow = input("Whether to include lowercase letters? Yes/No")
     if inclulow.lower() == "yes":
-        inclulow = True
+         chars.extend(low_let)
     elif inclulow.lower() == "no":
-        inclulow = False
+        pass
     else:
-        inclulow = False
+        pass
     inclusimbols = input("Whether to include symbols? Yes/No")
     if inclusimbols.lower() == "yes":
-        inclusimbols = True
+        chars.extend(punct)
     elif inclusimbols.lower() == "no":
-        inclusimbols = False
+        pass
     else:
-        inclusimbols = False
+        pass
+    chars = ''.join(chars)
     exclude_ambiguous = input("Whether to exclude ambiguous characters Yes/No")
     if exclude_ambiguous.lower() == "yes":
-        exclude_ambiguous = True
+        for i in range(len(chars)):
+            if chars[i] in ambiguous:
+                del chars[i]
+            else:
+                continue    
     elif exclude_ambiguous.lower() == "no":
-        exclude_ambiguous = False
+        pass
     else:
-        exclude_ambiguous = False
-print(user_request())
+        pass
+    return chars
