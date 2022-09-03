@@ -43,12 +43,3 @@ def user_request(inclunums,iclucaps,inclulow,inclusimbols,ambiguous):
         pass
     chars = chars1
     return chars
-
-inclunums = '0123456789'
-inclulow = 'abcdefghijklmnopqrstuvwxyz'
-iclucaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-inclusimbols = '!#$%&*+-=?@^_'
-ambiguous = 'il1Lo0O'
-
-
-print(user_request(inclunums,iclucaps,inclulow,inclusimbols,ambiguous))
