@@ -42,6 +42,3 @@ def user_request():
         chars = chars1
     elif exclude_ambiguous.lower() == "no":
         pass
-    else:
-        pass
-    return chars
