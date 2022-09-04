@@ -1,5 +1,6 @@
 from random import *
 from user_request import user_request
+from generate_password import generate_password
 inclunums = '0123456789'
 inclulow = 'abcdefghijklmnopqrstuvwxyz'
 iclucaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -23,9 +24,9 @@ while True: # проверка, что количесво символов не 
 
 chars = user_request(inclunums,iclucaps,inclulow,inclusimbols,ambiguous)
 
+print("\n Your password(s) is: \n")
+
 for i in range(count_of_pass):
+
     print(*generate_password(length, chars), sep='')
-
-
-
-
+    print()
