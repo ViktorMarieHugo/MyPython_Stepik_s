@@ -6,8 +6,7 @@ def coder_en(key,text):
     new_text = ''
     for i in range(len(text)):
         if text[i]in symbols or text[i] in nums:
-            new_text += text[i]
-            
+            new_text += text[i]            
         if text[i] in EN:
             num = ord(text[i])
             new = num - key
@@ -17,7 +16,6 @@ def coder_en(key,text):
             else:
                 new = chr(num - key)
                 new_text += new
-
         if text[i] in en:
             num = ord(text[i])
             new = num - key
@@ -27,4 +25,4 @@ def coder_en(key,text):
             else:
                 new = chr(num - key)
                 new_text += new
-    print(new_text)  
+    return new_text  
