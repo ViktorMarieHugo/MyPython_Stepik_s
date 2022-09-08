@@ -25,7 +25,4 @@ def coder_en(key,text):
             else:
                 new = chr(num - key)
                 new_text += new
-    return new_text  
-
-
-print(coder_en(25,'Sgd fqzrr hr zkvzxr fqddmdq nm sgd nsgdq rhcd ne sgd edmbd.'))
+    return new_text
