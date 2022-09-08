@@ -25,4 +25,5 @@ def coder_en(key,text):
             else:
                 new = chr(num - key)
                 new_text += new
-    return new_text
+    return new_text  
+

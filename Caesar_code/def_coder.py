@@ -37,19 +37,19 @@ def coder_en(key,text):
         if text[i] in EN:
             num = ord(text[i])
             new = num - key
-            if new < 65:
-                new = chr(num - key + 26)
+            if new > 65:
+                new = chr(num + key - 26)
                 new_text += new
             else:
-                new = chr(num - key)
+                new = chr(num + key)
                 new_text += new
         if text[i] in en:
             num = ord(text[i])
             new = num - key
-            if new < 97:
-                new = chr(num - key + 26)
+            if new > 97:
+                new = chr(num + key - 26)
                 new_text += new
             else:
-                new = chr(num - key)
+                new = chr(num + key)
                 new_text += new
     return new_text  
