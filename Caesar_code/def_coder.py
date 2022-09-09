@@ -10,7 +10,7 @@ def coder_ru(key, text):
 		if i in RU:
 			num = RU.find(i)
 			new = num + key
-			if new > 32:
+			if new > 31:
 				new = num + key - 32
 				new_text += RU[new]
 			else:
@@ -18,7 +18,7 @@ def coder_ru(key, text):
 		if i in ru:
 			num = ru.find(i)
 			new = num + key
-			if new > 32:
+			if new > 31:
 				new = num + key - 32
 				new_text += ru[new]
 			else:
@@ -64,7 +64,7 @@ def coder_en(key,text):
         if i in EN:
             num = EN.find(i)
             new = num + key
-            if new > 26:
+            if new > 25:
                 new = num + key - 26
                 new_text += EN[new]
             else:
@@ -72,7 +72,7 @@ def coder_en(key,text):
         if i in en:
             num = en.find(i)
             new = num + key
-            if new > 26:
+            if new > 25:
                 new = num + key - 26
                 new_text += en[new]
             else:
@@ -91,7 +91,7 @@ def decoder_en(key,text):
         if i in EN:
             num = EN.find(i)
             new = num - key
-            if new < 26:
+            if new < 0:
                 new = num - key + 26
                 new_text += EN[new]
             else:
@@ -99,7 +99,7 @@ def decoder_en(key,text):
         if i in en:
             num = en.find(i)
             new = num - key
-            if new < 26:
+            if new < 0:
                 new = num - key + 26
                 new_text += en[new]
             else:
