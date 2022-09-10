@@ -19,4 +19,4 @@ word_list = ['абажур', 'аббат', 'аббатиса', 'аббатств
 'какофония', 'кактус', 'кал']
 def get_word(word_list):
     word = get_word()
-    return word
+    return word.upper()
