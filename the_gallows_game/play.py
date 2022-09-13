@@ -65,6 +65,14 @@ def play():
         if len(word) > len(user_input) > 1:
             tries -= 1
             print("Это была неверная попытка", display_hangman(tries))
+        if tries == 0:
+            guessed = input("Сыграете ещё?  Да\Нет\n").lower()
+            if guessed == 'нет':
+                break
+            if guessed == 'да':
+                play()
+        else:
+            pass
 
 
 play()
