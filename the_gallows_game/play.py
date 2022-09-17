@@ -1,12 +1,9 @@
 from def_get_word import get_word
 from def_display_hangman import display_hangman
-RU = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
-
 def play():
     guessed = True
     print("Добро пожаловать в игру 'Виселица'!")
     word = get_word()
-    print(word)
     word_completion = '_' * len(word)
     print("Загаданное слово  ", *word_completion, '\n')
     tries = 6
@@ -14,7 +11,6 @@ def play():
     unguessed_letters = []
     unguessed_words = []
     user_guess = list(word_completion)
-
 
     while guessed == True:
         user_input = input("Введите букву или слово целиком\n").upper() 
@@ -33,7 +29,6 @@ def play():
                         break
                     if guessed == 'да':
                         play()
-
             else:
                 tries -= 1
                 unguessed_words.append(user_input)
@@ -73,11 +68,4 @@ def play():
                 play()
         else:
             pass
-
-
 play()
-
-''' tries = 6
-        word_completion = '_' * len(word)
-        print(word_completion)
-        '''
