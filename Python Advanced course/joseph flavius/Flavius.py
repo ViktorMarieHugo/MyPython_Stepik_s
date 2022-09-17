@@ -1,5 +1,5 @@
-n =int(input())
-k = int(input())
+n =int(input()) # Сколько будет солдат
+k = int(input()) # Периодичность
 n_s = list(range(1,n+1))
 while len(n_s) != 1:
     for i in range(k-1):
