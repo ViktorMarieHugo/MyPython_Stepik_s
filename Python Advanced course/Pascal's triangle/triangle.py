@@ -12,3 +12,15 @@ for i in range(0, n+1):
     for j in range(0, n+1):         
         print(pascal[i][j], end = ' ')  #Вывод в виде таблицы без скобок
     print()
+
+print(pascal[n])                        # Вывод строки n
+
+for i in range(0, n+1):
+    for j in range(0, i+1):         
+        print(pascal[i][j], end = ' ')  #Вывод в виде таблицы без скобок и без нулей
+    print()
+
+for i in range(0, n):
+    for j in range(0, i+1):         
+        print(pascal[i][j], end = ' ')  #Выводит первые n- строк треугольника
+    print()
