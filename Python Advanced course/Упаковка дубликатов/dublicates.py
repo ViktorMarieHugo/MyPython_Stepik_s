@@ -1,4 +1,5 @@
 s = input().split()
+'''
 s1 = []
 while len(s) != 0:
     s2 = []                                   # Создали временный список
@@ -9,3 +10,16 @@ while len(s) != 0:
             s2.append(k)
     s1.append(s2)                             # Вставляем все найденные в новый список  
 print(s1)
+'''
+
+s = input().split()                           # Проход по порядку и упаковка в списки бизлежащие дубли
+s1 = list([])
+s2 = list([s[0]])
+for i in range(1, len(s)):
+    if s[i] not in s2:
+        s1.append(list(s2))
+        s2 = [s[i]]
+
+    else:
+        s2.append(s[i])
+print(s1+[s2])
