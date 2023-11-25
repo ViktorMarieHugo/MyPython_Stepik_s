@@ -8,4 +8,9 @@ print(a, b, c, end="@@@")
 print()
 print(a, b, c, end="###")
 print()
-print(a, b, c, sep="-")
+print(a, b, c, sep="-", end="\n\n\n")
+
+
+print("a", "b", "c")
+print("d", "e", "f", end=" ")
+print("g", "h", "i")
