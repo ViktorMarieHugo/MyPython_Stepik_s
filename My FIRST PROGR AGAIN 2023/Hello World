@@ -1,0 +1,13 @@
+print("Hello, WorlD!")
+print("hello MFK")
+
+
+'''def get_sum(a, b) -> int:
+    return a + b
+
+
+print(get_sum(5, 7))'''
+
+num = [4,8,15,16,23,42]
+for n in num:
+    print(n)
