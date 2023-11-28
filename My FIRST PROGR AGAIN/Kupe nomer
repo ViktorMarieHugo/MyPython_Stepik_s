@@ -1,0 +1,7 @@
+n = int(input())
+s = -n
+qupe = (s // 4) * -1
+if 1 < qupe < 9:
+    print(qupe)
+else:
+    print("такого купе у нас нет!!!")
