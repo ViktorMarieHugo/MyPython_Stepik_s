@@ -1,0 +1,33 @@
+# определение четвертей системы координат
+
+"""x = int(input())
+y = int(input())
+if x > 0:
+    if y > 0:
+        print("Первая четверть")
+    else:
+        print("Четвертая четверть")
+else:
+    if y > 0:
+        print("Вторая четверть")
+    else:
+        print("Третья четверть")"""
+
+"""year = int(input())
+last_digit = year % 10
+pre_last = year // 10 % 10
+if last_digit == 0 and pre_last == 0:
+    print("YES")
+else:
+    print("NO")
+
+print(last_digit, pre_last)"""
+
+A1 = int(input())
+A2 = int(input())
+B1 = int(input())
+B2 = int(input())
+if (A1 + A2 + B1 + B2) % 2 == 0:
+    print("YES")
+else:
+    print("NO")
